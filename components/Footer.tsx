@@ -1,8 +1,11 @@
 
-import React from 'react';
-import { Instagram, Linkedin, Mail, MapPin, Phone, Smartphone, Send } from 'lucide-react';
+import React, { useState } from 'react';
+import { Instagram, Linkedin, Mail, MapPin, Phone, Smartphone, Send, ShieldCheck } from 'lucide-react';
+import AdminPanel from './AdminPanel';
 
 const Footer: React.FC = () => {
+  const [isAdminOpen, setIsAdminOpen] = useState(false);
+
   const scrollToSection = (e: React.MouseEvent, id: string) => {
     e.preventDefault();
     const element = document.getElementById(id);
@@ -77,7 +80,6 @@ const Footer: React.FC = () => {
                 <Instagram className="w-5 h-5" />
               </a>
               <a href="https://t.me/royeshsabzevar" className="p-3 bg-gray-800 rounded-xl hover:bg-emerald-600 transition-all">
-                {/* Fixed: Send is now imported from lucide-react */}
                 <Send className="w-5 h-5" />
               </a>
             </div>
@@ -91,10 +93,18 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-800 pt-8 text-center text-xs text-gray-500">
-          <p>© ۱۴۰۴ تمامی حقوق برای مرکز کارآفرینی رویش محفوظ است.</p>
+        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs text-gray-500">© ۱۴۰۴ تمامی حقوق برای مرکز کارآفرینی رویش محفوظ است.</p>
+          <button 
+            onClick={() => setIsAdminOpen(true)}
+            className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-gray-700 hover:text-rooish transition-colors"
+          >
+            <ShieldCheck className="w-3 h-3" /> System Terminal
+          </button>
         </div>
       </div>
+      
+      <AdminPanel isOpen={isAdminOpen} onClose={() => setIsAdminOpen(false)} />
     </footer>
   );
 };

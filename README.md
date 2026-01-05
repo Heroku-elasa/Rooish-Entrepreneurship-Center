@@ -18,5 +18,3 @@ View your app in AI Studio: https://ai.studio/apps/drive/1kJKW5Gg03khB_Sk5gsGdPx
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
-# replit-V-For-SmartWaste-AI---Intelligent-Waste-Management-number-2
-# replit-V-For-SmartWaste-AI---Intelligent-Waste-Management-number-2

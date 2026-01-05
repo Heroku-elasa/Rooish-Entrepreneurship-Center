@@ -53,10 +53,6 @@ const CallForAI: React.FC = () => {
     
     // شبیه‌سازی ارسال به soheil.power@gmail.com
     console.log("Sending Form Data to soheil.power@gmail.com:", formData);
-    
-    // In a production environment, you would use an email integration like Resend or SendGrid
-    // to send the actual email to soheil.power@gmail.com.
-    // The current code simulates this for testing purposes.
 
     setTimeout(() => {
       setIsSubmitting(false);

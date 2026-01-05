@@ -13,13 +13,3 @@ export interface GoalItem {
 export interface Partner {
   name: string;
 }
-
-declare global {
-  interface Window {
-    aistudio?: {
-      hasSelectedApiKey: () => Promise<boolean>;
-      openSelectKey: () => Promise<void>;
-    };
-    GEMINI_API_KEY?: string;
-  }
-}

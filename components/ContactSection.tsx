@@ -25,10 +25,6 @@ const ContactSection: React.FC = () => {
     
     // تست و شبیه‌سازی ارسال به soheil.power@gmail.com
     console.log("Submitting Contact Data to soheil.power@gmail.com:", formData);
-    
-    // In a production environment, you would use an email integration like Resend or SendGrid
-    // to send the actual email to soheil.power@gmail.com.
-    // The current code simulates this for testing purposes.
 
     setTimeout(() => {
       setIsSubmitting(false);
@@ -55,45 +51,45 @@ const ContactSection: React.FC = () => {
           {/* Contact Cards */}
           <div className="lg:col-span-5 space-y-6">
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl hover:shadow-rooish/5 transition-all group">
+              <a href="tel:09151710036" className="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl hover:shadow-rooish/10 transition-all group block">
                 <div className="w-12 h-12 bg-rooish/10 text-rooish rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Smartphone className="w-6 h-6" />
                 </div>
                 <h4 className="font-black text-gray-900 mb-1 text-sm">تلفن همراه</h4>
                 <p className="text-rooish font-bold text-sm" dir="ltr">09151710036</p>
-              </div>
+              </a>
 
-              <div className="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl hover:shadow-rooish/5 transition-all group">
+              <a href="tel:05144235337" className="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl hover:shadow-rooish/10 transition-all group block">
                 <div className="w-12 h-12 bg-rooish/10 text-rooish rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Phone className="w-6 h-6" />
                 </div>
                 <h4 className="font-black text-gray-900 mb-1 text-sm">تلفن ثابت</h4>
                 <p className="text-rooish font-bold text-sm" dir="ltr">05144235337</p>
-              </div>
+              </a>
 
-              <div className="bg-gradient-to-br from-purple-500 to-pink-500 p-6 rounded-[2rem] text-white shadow-lg shadow-pink-500/20 group hover:-translate-y-1 transition-all">
+              <a href="https://instagram.com/royeshsabzevar" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-purple-500 to-pink-500 p-6 rounded-[2rem] text-white shadow-lg shadow-pink-500/20 group hover:-translate-y-1 transition-all block">
                 <Instagram className="w-8 h-8 mb-4 group-hover:rotate-12 transition-transform" />
                 <h4 className="font-black mb-1 text-sm">اینستاگرام</h4>
                 <p className="text-xs opacity-90" dir="ltr">@royeshsabzevar</p>
-              </div>
+              </a>
 
-              <div className="bg-gradient-to-br from-blue-400 to-blue-600 p-6 rounded-[2rem] text-white shadow-lg shadow-blue-500/20 group hover:-translate-y-1 transition-all">
+              <a href="https://t.me/royeshsabzevar" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-blue-400 to-blue-600 p-6 rounded-[2rem] text-white shadow-lg shadow-blue-500/20 group hover:-translate-y-1 transition-all block">
                 <Send className="w-8 h-8 mb-4 group-hover:-translate-y-1 transition-transform" />
                 <h4 className="font-black mb-1 text-sm">تلگرام</h4>
                 <p className="text-xs opacity-90" dir="ltr">@royeshsabzevar</p>
-              </div>
+              </a>
 
-              <div className="bg-gradient-to-br from-orange-400 to-orange-600 p-6 rounded-[2rem] text-white shadow-lg shadow-orange-500/20 group hover:-translate-y-1 transition-all">
+              <a href="https://eitaa.com/royeshsabzevar" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-orange-400 to-orange-600 p-6 rounded-[2rem] text-white shadow-lg shadow-orange-500/20 group hover:-translate-y-1 transition-all block">
                 <MessageSquare className="w-8 h-8 mb-4 group-hover:scale-110 transition-transform" />
                 <h4 className="font-black mb-1 text-sm">ایتا</h4>
                 <p className="text-xs opacity-90" dir="ltr">@royeshsabzevar</p>
-              </div>
+              </a>
 
-              <div className="bg-gradient-to-br from-indigo-500 to-purple-700 p-6 rounded-[2rem] text-white shadow-lg shadow-indigo-500/20 group hover:-translate-y-1 transition-all">
+              <a href="https://rubika.ir/09123456789" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-indigo-500 to-purple-700 p-6 rounded-[2rem] text-white shadow-lg shadow-indigo-500/20 group hover:-translate-y-1 transition-all block">
                 <Share2 className="w-8 h-8 mb-4 group-hover:rotate-12 transition-transform" />
                 <h4 className="font-black mb-1 text-sm">روبیکا</h4>
                 <p className="text-xs opacity-90" dir="ltr">09123456789</p>
-              </div>
+              </a>
             </div>
 
             <div className="bg-white p-8 rounded-[2.5rem] shadow-sm border border-gray-100 flex items-start gap-6">

@@ -6,21 +6,10 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
       server: {
-        port: 5000,
+        port: 3000,
         host: '0.0.0.0',
-        allowedHosts: true,
       },
       plugins: [react()],
-      theme: {
-        extend: {
-          colors: {
-            rooish: '#059669',
-            'rooish-dark': '#064e3b',
-            'rooish-light': '#d1fae5',
-            'rooish-accent': '#10b981',
-          }
-        }
-      },
       define: {
         'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
         'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
